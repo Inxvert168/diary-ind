@@ -1,17 +1,17 @@
-# Import
+# Impor
 from flask import Flask, render_template,request, redirect
-# Importing the database library
+# Mengimpor pustaka database
 from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-# Connecting SQLite
+# Menghubungkan SQLite
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///diary.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# Creating a DB
+# Membuat sebuah DB
 db = SQLAlchemy(app )
 
-#Assignment #1. Create a DB table
+#Tugas #1. Membuat tabel DB
 
 
 
@@ -23,32 +23,32 @@ db = SQLAlchemy(app )
 
 
 
-# Running the page with content
+# Menjalankan halaman dengan konten
 @app.route('/')
 def index():
-    # Displaying the DB objects
-    # Assignment #2. Display the objects from the DB in index.html
+    # Menampilkan objek DB
+    # Tugas #2. Menampilkan objek-objek dari DB di index.html
     
 
     return render_template('index.html',
-                           #cards = cards
+                           #cards = kartu
 
                            )
 
-# Running the page with the card
+# Menjalankan halaman dengan kartu
 @app.route('/card/<int:id>')
 def card(id):
-    # Assignment #2. Display the right card by its id
+    # Tugas #2. Menampilkan kartu yang tepat berdasarkan id-nya
     
 
     return render_template('card.html', card=card)
 
-# Running the page and creating the card
+# Menjalankan halaman dan membuat kartu
 @app.route('/create')
 def create():
     return render_template('create_card.html')
 
-# The card form
+# Formulir kartu
 @app.route('/form_create', methods=['GET','POST'])
 def form_create():
     if request.method == 'POST':
@@ -56,7 +56,7 @@ def form_create():
         subtitle =  request.form['subtitle']
         text =  request.form['text']
 
-        # Assignment #2. Create a way to store data in the DB
+        # Tugas #2. Buatlah cara untuk menyimpan data dalam DB
         
 
 

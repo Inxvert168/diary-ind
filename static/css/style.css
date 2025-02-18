@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 body::-webkit-scrollbar {
     width: 12px;
   }
   
   body::-webkit-scrollbar-track {
-    background: #0F172A;        /* the colour of the track zone */
+    background: #0b183a
+    ;        /* warna zona pelacak */
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: rgba(30, 41, 59, 0.4);    /* the slider's colour */
-    border-radius: 20px;       /* the slider's roundness */
+    background-color: rgba(30, 41, 59, 0.4);    /* warna scrollbar */
+    border-radius: 20px;       /* bulatnya scrollbar */
     border: none;
   }
 
@@ -19,11 +21,13 @@ body::-webkit-scrollbar {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 16px;
     line-height: 20px;
-    background-color: #0F172A;
-    color: #F8FAFC;
+    background-color: #0b183a
+    ;
+    color: #c0edff
+    ;
 }
 
 h1, h2, p {
@@ -38,6 +42,7 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+    transition: 0.2s;
 }
 
 ul {
@@ -167,11 +172,12 @@ ul {
 }
 
 .form__input {
-    background: #0F172A;
+    background: #0b183a
+    ;
     border-radius: 10px;
     padding: 10px;
     height: 30px;
-    color: #F8FAFC;
+    color: #c0edff;
     font: inherit;
     border: none;
     width: 94%;
@@ -182,10 +188,12 @@ ul {
 }
 
 .form__text {
-    background: #0F172A;
+    background: #0b183a
+    ;
     border-radius: 10px;
     padding: 10px;
-    color: #F8FAFC;
+    color: #c0edff
+    ;
     font: inherit;
     border: none;
     width: 94%;
@@ -193,7 +201,8 @@ ul {
 
 .form__button {
     border: 1px solid rgba(14, 165, 233, 1);
-    background: #0F172A;
+    background: #0b183a
+    ;
     border-radius: 10px;
     color: rgba(14, 165, 233, 1);
     padding: 10px;
@@ -205,7 +214,8 @@ ul {
 }
 
 .form__button:hover {
-    color: #F8FAFC;
+    color: #c0edff
+    ;
     background:  rgba(14, 165, 233, 1);
 }
 
@@ -238,7 +248,8 @@ ul {
 .main__link {
     display: block;
     border: 1px solid rgba(14, 165, 233, 1);
-    background: #0F172A;
+    background: #0b183a
+    ;
     border-radius: 10px;
     color: rgba(14, 165, 233, 1);
     padding: 15px 10px;
@@ -250,6 +261,47 @@ ul {
 }
 
 .main__link:hover {
-    color: #F8FAFC;
+    color: #c0edff
+    ;
     background:  rgba(14, 165, 233, 1);
+}
+
+
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 30%;
+    padding: 50px 30px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.4);
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.login label {
+    width: 60%;
+}
+
+
+.reg__link {
+    height: fit-content;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.error {
+    font-size: 10px;
+    color: #fff;
+}
+
+.login__link:hover {
+    color: rgba(14, 165, 233, 1);
 }
